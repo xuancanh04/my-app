@@ -1,0 +1,151 @@
+.featured-projects {
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 50px;
+    width: 110%;
+    box-sizing: border-box;
+    margin-top: 60px;
+}
+
+.dark-mode .featured-projects {
+    background-color: var(--dark-bg-tertiary);
+    color: var(--dark-text-secondary);
+}
+
+.light-mode .featured-projects {
+    background-color: var(--light-bg-tertiary);
+    color: var(--light-text-secondary);
+}
+
+.featured-projects h2 {
+    font-size: 2em;
+}
+
+.dark-mode .featured-projects h2 {
+    color: var(--dark-text-primary);
+}
+
+.light-mode .featured-projects h2 {
+    color: var(--light-text-primary);
+}
+
+.featured-projects span {
+    color: #8b5cf6;
+}
+
+.dark-mode .featured-projects span {
+    color: var(--dark-accent-primary);
+}
+
+.light-mode .featured-projects span {
+    color: var(--light-accent-primary);
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: center; /* Center the grid */
+    gap: 20px; /* Add gap between project cards */
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: #1f2937;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+}
+
+.dark-mode .project-card {
+    background-color: var(--dark-card-bg);
+}
+
+.light-mode .project-card {
+    background-color: var(--light-card-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tag {
+    background-color: #334155;
+    color: #ffffff !important;
+    padding: 5px 10px;
+    border-radius: 15px; /* Bo tròn hơn */
+    font-size: 0.8em; /* Giảm kích thước chữ */
+    display: inline-block;
+}
+
+.dark-mode .tag {
+    background-color: var(--dark-bg-tertiary);
+    color: var(--dark-text-primary) !important;
+}
+
+.light-mode .tag {
+    background-color: var(--light-bg-tertiary);
+    color: var(--light-text-primary) !important;
+}
+
+.view-all-btn {
+    padding: 10px 20px;
+    background-color: transparent; /* Nền trong suốt */
+    color: #64B5F6; /* Màu chữ */
+    border: 2px solid #64B5F6; /* Viền màu xanh */
+    border-radius: 25px; /* Bo tròn góc */
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Khoảng cách giữa chữ và icon */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 80px; /* Tăng từ 40px lên 60px để đẩy nút xuống dưới */
+}
+
+.dark-mode .view-all-btn {
+    color: var(--dark-accent-secondary);
+    border-color: var(--dark-accent-secondary);
+}
+
+.light-mode .view-all-btn {
+    color: var(--light-accent-secondary);
+    border-color: var(--light-accent-secondary);
+}
+
+.dark-mode .view-all-btn:hover {
+    background-color: var(--dark-accent-secondary);
+    color: white;
+}
+
+.light-mode .view-all-btn:hover {
+    background-color: var(--light-accent-secondary);
+    color: white;
+}
+
+.view-project-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    color: #64B5F6;
+    border: none;
+    padding: 8px 0;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-top: 15px;
+}
+
+.view-project-btn:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}

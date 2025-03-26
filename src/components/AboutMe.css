@@ -1,0 +1,447 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0f172a; /* Nền tối */
+    color: #e5e7eb; /* Màu chữ trắng */
+    font-family: Arial, sans-serif;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #0f172a; /* Nền tối */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header {
+    background-color: #0f172a;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Căn chỉnh các phần tử theo chiều dọc */
+    gap: 20px; /* Điều chỉnh khoảng cách giữa các nút */
+    padding: 0;
+    margin: 0;
+    justify-content: flex-start; /* Căn chỉnh các nút qua bên trái */
+    margin-top: 20px;
+}
+
+.nav-item {
+    color: #e5e7eb;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-icon {
+    font-size: 1.2em;
+}
+
+.nav-item:hover {
+    color: #e5e7eb;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover .nav-icon {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the content */
+    justify-content: center;
+    padding: 20px;
+    margin: 0 auto; /* Center the main content */
+}
+
+.introduction {
+    display: flex;
+    justify-content: space-between; /* Căn đều hai bên */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.content {
+    flex: 1;
+    text-align: left;
+}
+
+.intro-title {
+    font-size: 1.6em;
+    margin-bottom: -40px;
+    color: #e5e7eb;
+    margin-top: 100px;
+    font-weight: normal;
+}
+
+.intro-name {
+    font-size: 4em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #64B5F6, #7C4DFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    margin-bottom: 10px;
+}
+
+.intro-role {
+    font-size: 2em;
+    color: #64B5F6;
+    margin-bottom: 20px;
+    margin-top: 0px; /* Tăng margin-top để đẩy xuống dưới */
+}
+
+.intro-description {
+    font-size: 1.2em;
+    color: #e5e7eb;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start; /* Căn trái các nút */
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-work {
+    background: linear-gradient(45deg, #64B5F6, #7C4DFF);
+    color: #e5e7eb;
+    border: none;
+}
+
+.btn-contact {
+    background: transparent;
+    color: #e5e7eb;
+    border: 2px solid #e5e7eb;
+}
+
+.statistics {
+    display: flex;
+    gap: 50px;
+    margin-top: -50px; /* Giảm margin-top để chỉ di chuyển phần này lên trên */
+    margin-left: -730px;
+}
+
+.stat h3 {
+    font-size: 2em;
+    color: #64B5F6;
+    margin-bottom: 5px;
+}
+
+.stat p {
+    color: #e5e7eb;
+    font-size: 0.9em;
+}
+
+.scroll-down {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.scroll-down p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+    transform: none;
+}
+
+.scroll-down .arrow-icon {
+    display: block;
+    animation: bounceArrow 2s infinite;
+}
+
+@keyframes bounceArrow {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .scroll-down {
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+}
+
+.portfolio-title {
+    margin-right: 550px; /* Đẩy chữ "Portfolio" sang bên trái */
+    margin-left: 150px;
+    font-weight: bold;
+    font-size: 1.6em;
+    color: #8b5cf6;
+}
+
+.btn-toggle-mode {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    font-size: 1.5em;
+    color: #e5e7eb;
+}
+
+.dark-mode {
+    background-color: var(--dark-bg-primary);
+    color: var(--dark-text-primary);
+}
+
+.light-mode {
+    background-color: var(--light-bg-primary);
+    color: var(--light-text-primary);
+}
+
+.light-mode .btn-work {
+    background-color: #6200ea;
+    color: #ffffff;
+}
+
+.light-mode .btn-contact {
+    background-color: #03dac6;
+    color: #000000;
+}
+
+.light-mode .portfolio-title {
+    color: #6200ea;
+}
+
+.light-mode .nav-item {
+    color: #000000;
+}
+
+.light-mode .btn-toggle-mode {
+    color: #000000;
+}
+
+.btn-toggle-mode {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    font-size: 1.2em;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.btn-toggle-mode:hover {
+    transform: rotate(30deg);
+}
+
+.light-mode .btn-toggle-mode {
+    color: #000000;
+}
+
+.specialization {
+    display: block;
+    margin-top: -30px; /* Giảm margin-top để kéo lên trên */
+}
+
+.avatar {
+    margin-left: 200px; /* Giảm giá trị để di chuyển hình ảnh sang trái */
+    margin-top: 200px; /* Khoảng cách giữa nội dung và hình ảnh */
+}
+
+.avatar img {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: bounce 2s infinite; /* Thêm animation giống như Scroll Down */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.avatar img:hover {
+    transform: scale(1.1); /* Phóng to khi hover */
+}
+
+/* Base Styles with Mode Support */
+.portfolio {
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode {
+  background-color: var(--dark-bg-primary);
+  color: var(--dark-text-primary);
+}
+
+.light-mode {
+  background-color: var(--light-bg-primary);
+  color: var(--light-text-primary);
+}
+
+/* Header and Navigation */
+.header {
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode .header {
+  background-color: var(--dark-bg-primary);
+}
+
+.light-mode .header {
+  background-color: var(--light-bg-primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .nav-item {
+  color: var(--dark-text-secondary);
+}
+
+.light-mode .nav-item {
+  color: var(--light-text-secondary);
+}
+
+.dark-mode .portfolio-title {
+  color: var(--dark-accent-primary);
+}
+
+.light-mode .portfolio-title {
+  color: var(--light-accent-primary);
+}
+
+.dark-mode .btn-toggle-mode {
+  color: var(--dark-text-primary);
+}
+
+.light-mode .btn-toggle-mode {
+  color: var(--light-text-primary);
+}
+
+/* Introduction Section */
+.dark-mode .intro-title {
+  color: var(--dark-text-secondary);
+}
+
+.light-mode .intro-title {
+  color: var(--light-text-secondary);
+}
+
+.dark-mode .intro-name {
+  background: linear-gradient(45deg, #64B5F6, #7C4DFF);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.light-mode .intro-name {
+  background: linear-gradient(45deg, #3b82f6, #6d28d9);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.dark-mode .intro-role {
+  color: var(--dark-accent-secondary);
+}
+
+.light-mode .intro-role {
+  color: var(--light-accent-secondary);
+}
+
+.dark-mode .intro-description {
+  color: var(--dark-text-secondary);
+}
+
+.light-mode .intro-description {
+  color: var(--light-text-secondary);
+}
+
+/* Buttons */
+.dark-mode .btn-work {
+  background: linear-gradient(45deg, #64B5F6, #7C4DFF);
+  color: white;
+}
+
+.light-mode .btn-work {
+  background: linear-gradient(45deg, #3b82f6, #6d28d9);
+  color: white;
+}
+
+.dark-mode .btn-contact {
+  border: 2px solid var(--dark-text-secondary);
+  color: var(--dark-text-secondary);
+}
+
+.light-mode .btn-contact {
+  border: 2px solid var(--light-accent-secondary);
+  color: var(--light-accent-secondary);
+}
+
+/* Statistics */
+.dark-mode .stat h3 {
+  color: var(--dark-accent-secondary);
+}
+
+.light-mode .stat h3 {
+  color: var(--light-accent-secondary);
+}
+
+.dark-mode .stat p {
+  color: var(--dark-text-secondary);
+}
+
+.light-mode .stat p {
+  color: var(--light-text-secondary);
+}
+
+/* Scroll Down */
+.dark-mode .scroll-down {
+  color: var(--dark-text-secondary);
+}
+
+.light-mode .scroll-down {
+  color: var(--light-text-secondary);
+}

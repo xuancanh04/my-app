@@ -1,0 +1,801 @@
+/* Base styles */
+.contact-content {
+  padding: 60px 0;
+  transition: all 0.3s ease;
+  color: #fff;
+  min-height: calc(100vh - 80px);
+}
+
+.dark-mode .contact-content {
+  background-color: var(--dark-bg-primary);
+  color: var(--dark-text-primary);
+}
+
+.light-mode .contact-content {
+  background-color: var(--light-bg-primary);
+  color: var(--light-text-primary);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Contact header */
+.contact-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.dark-mode .contact-title {
+  color: var(--dark-text-primary);
+}
+
+.light-mode .contact-title {
+  color: var(--light-text-primary);
+}
+
+.highlight {
+  transition: color 0.3s ease;
+}
+
+.dark-mode .highlight {
+  color: var(--dark-accent-primary);
+}
+
+.light-mode .highlight {
+  color: var(--light-accent-primary);
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.dark-mode .contact-subtitle {
+  color: var(--dark-text-secondary);
+}
+
+.light-mode .contact-subtitle {
+  color: var(--light-text-secondary);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.divider-line {
+  width: 70px;
+  height: 1px;
+}
+
+.dark-mode .divider-line {
+  background-color: rgba(110, 138, 255, 0.5);
+}
+
+.light-mode .divider-line {
+  background-color: rgba(37, 99, 235, 0.5);
+}
+
+.divider-icon {
+  margin: 0 15px;
+}
+
+.dark-mode .divider-icon {
+  color: var(--dark-accent-secondary);
+}
+
+.light-mode .divider-icon {
+  color: var(--light-accent-secondary);
+}
+
+/* Contact layout */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* Contact info section */
+.contact-info,
+.contact-form {
+  border-radius: 16px;
+  padding: 35px;
+  height: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .contact-info, .dark-mode .contact-form {
+  background-color: var(--dark-bg-secondary);
+}
+
+.light-mode .contact-info, .light-mode .contact-form {
+  background-color: var(--light-card-bg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info h2, .contact-form h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.dark-mode .contact-info h2, .dark-mode .contact-form h2 {
+  color: var(--dark-text-primary);
+}
+
+.light-mode .contact-info h2, .light-mode .contact-form h2 {
+  color: var(--light-text-primary);
+}
+
+.info-text, .form-text {
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+.dark-mode .info-text, .dark-mode .form-text {
+  color: var(--dark-text-secondary);
+}
+
+.light-mode .info-text, .light-mode .form-text {
+  color: var(--light-text-secondary);
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .contact-item {
+  background-color: rgba(19, 24, 37, 0.7);
+}
+
+.light-mode .contact-item {
+  background-color: rgba(241, 245, 249, 0.7);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+}
+
+.dark-mode .contact-item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.light-mode .contact-item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.dark-mode .email-icon {
+  background-color: rgba(239, 71, 111, 0.2);
+  color: #ef476f;
+}
+
+.light-mode .email-icon {
+  background-color: rgba(239, 71, 111, 0.1);
+  color: #ef476f;
+}
+
+.dark-mode .linkedin-icon {
+  background-color: rgba(14, 118, 168, 0.2);
+  color: #0e76a8;
+}
+
+.light-mode .linkedin-icon {
+  background-color: rgba(14, 118, 168, 0.1);
+  color: #0e76a8;
+}
+
+.dark-mode .github-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.light-mode .github-icon {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.dark-mode .tiktok-icon {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.light-mode .tiktok-icon {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.contact-detail {
+  flex: 1;
+}
+
+.contact-detail h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 5px;
+  color: #fff;
+}
+
+.contact-detail p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.contact-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.contact-link:hover {
+  color: #6e8aff;
+  text-decoration: underline;
+}
+
+.contact-item:hover .contact-link {
+  color: #fff;
+}
+
+/* TikTok card */
+.tiktok-card {
+  background: linear-gradient(135deg, #ff0050, #00f2ea);
+  border-radius: 16px;
+  padding: 25px;
+  color: white;
+  margin-top: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tiktok-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.tiktok-card p {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.tiktok-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.stat-icon {
+  font-size: 0.9rem;
+}
+
+.tiktok-profile {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+  margin-right: 15px;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h4 {
+  font-size: 1rem;
+  margin: 0 0 5px;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 15px;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.profile-info p {
+  font-size: 0.8rem;
+  margin: 0 0 10px;
+}
+
+.follow-btn {
+  background-color: #fe2c55;
+  border: none;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.tiktok-btn {
+  background-color: #000;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.tiktok-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Contact form section */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.form-group label {
+  width: 100px;
+  padding-top: 12px;
+  font-size: 0.9rem;
+  margin-right: 15px;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.dark-mode .form-group label {
+  color: var(--dark-text-secondary);
+}
+
+.light-mode .form-group label {
+  color: var(--light-text-secondary);
+}
+
+.form-group input,
+.form-group textarea {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group textarea {
+  background-color: rgba(19, 24, 37, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.light-mode .form-group input,
+.light-mode .form-group textarea {
+  background-color: rgba(248, 250, 252, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--light-text-primary);
+}
+
+.dark-mode .form-group input:focus,
+.dark-mode .form-group textarea:focus {
+  border-color: var(--dark-accent-secondary);
+  box-shadow: 0 0 0 2px rgba(110, 138, 255, 0.1);
+}
+
+.light-mode .form-group input:focus,
+.light-mode .form-group textarea:focus {
+  border-color: var(--light-accent-secondary);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  border: none;
+}
+
+.dark-mode .submit-btn {
+  background-color: var(--dark-accent-secondary);
+  color: white;
+}
+
+.light-mode .submit-btn {
+  background-color: var(--light-accent-secondary);
+  color: white;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+}
+
+.dark-mode .submit-btn:hover {
+  background-color: #5a78e6;
+}
+
+.light-mode .submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.spinner-icon {
+  animation: spin 1s linear infinite;
+}
+
+.send-icon {
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover .send-icon {
+  transform: translateX(5px);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Video section */
+.video-section {
+  margin-top: 50px;
+}
+
+.video-section h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.tiktok-video {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-preview {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.video-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.video-stats {
+  color: white;
+  font-size: 0.85rem;
+}
+
+.watch-btn {
+  background-color: #fe2c55;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.watch-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive styles */
+@media (max-width: 1100px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+  
+  .contact-info,
+  .contact-form {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-title {
+    font-size: 2.5rem;
+  }
+  
+  .contact-info {
+    order: 2;
+  }
+  
+  .contact-form {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    padding: 40px 0;
+  }
+  
+  .contact-title {
+    font-size: 2.2rem;
+  }
+  
+  .profile-image {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-header {
+    margin-bottom: 30px;
+  }
+  
+  .contact-title {
+    font-size: 2rem;
+  }
+  
+  .contact-subtitle {
+    font-size: 1rem;
+  }
+  
+  .contact-info,
+  .contact-form {
+    padding: 25px;
+  }
+  
+  .contact-item {
+    padding: 12px;
+  }
+  
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .tiktok-card {
+    padding: 20px;
+  }
+  
+  .tiktok-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-image {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .form-group {
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    width: 100%;
+    padding-top: 0;
+    margin-bottom: 8px;
+    margin-right: 0;
+  }
+}
+
+/* Thêm biến màu cho chế độ sáng */
+:root {
+  --light-bg-primary: #f8fafc;
+  --light-bg-secondary: #ffffff;
+  --light-text-primary: #1e293b;
+  --light-text-secondary: #475569;
+  --light-accent-primary: #4f6df5;
+  --light-accent-secondary: #3b5fe0;
+  --light-card-bg: #ffffff;
+  --light-card-hover: #f1f5f9;
+  --light-border: rgba(0, 0, 0, 0.1);
+  --light-input-bg: #f8fafc;
+}
+
+/* Contact info section - Light Mode */
+.light-mode .contact-detail h3 {
+  color: var(--light-text-primary);
+  font-weight: 600;
+}
+
+.light-mode .contact-link {
+  color: var(--light-text-secondary);
+}
+
+.light-mode .contact-link:hover {
+  color: var(--light-accent-primary);
+}
+
+.light-mode .contact-item:hover .contact-link {
+  color: var(--light-accent-primary);
+}
+
+/* Adjust form elements for Light Mode */
+.light-mode .form-group input,
+.light-mode .form-group textarea {
+  background-color: var(--light-input-bg);
+  border: 1px solid var(--light-border);
+  color: var(--light-text-primary);
+}
+
+.light-mode .form-group input:focus,
+.light-mode .form-group textarea:focus {
+  border-color: var(--light-accent-primary);
+  box-shadow: 0 0 0 2px rgba(79, 109, 245, 0.15);
+  outline: none;
+}
+
+.light-mode .form-group input::placeholder,
+.light-mode .form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* Adjust submit button for Light Mode */
+.light-mode .submit-btn {
+  background-color: var(--light-accent-primary);
+  color: white;
+}
+
+.light-mode .submit-btn:hover {
+  background-color: var(--light-accent-secondary);
+  box-shadow: 0 4px 12px rgba(79, 109, 245, 0.2);
+}
+
+/* Social icons colors for Light Mode */
+.light-mode .email-icon {
+  background-color: rgba(239, 71, 111, 0.1);
+  color: #e63946;
+}
+
+.light-mode .linkedin-icon {
+  background-color: rgba(14, 118, 168, 0.1);
+  color: #0077b5;
+}
+
+.light-mode .github-icon {
+  background-color: rgba(33, 33, 33, 0.1);
+  color: #24292e;
+}
+
+.light-mode .tiktok-icon {
+  background-color: rgba(0, 0, 0, 0.08);
+  color: #000000;
+}
+
+/* Header styling for Light Mode */
+.light-mode .header {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .nav-item {
+  color: var(--light-text-secondary);
+}
+
+.light-mode .nav-item.active {
+  color: var(--light-accent-primary);
+  font-weight: 600;
+}
+
+.light-mode .portfolio-title {
+  color: var(--light-accent-primary);
+}
+
+.light-mode .btn-toggle-mode {
+  color: var(--light-text-secondary);
+}
+
+/* Card styling for better visual in Light Mode */
+.light-mode .contact-info, 
+.light-mode .contact-form {
+  background-color: var(--light-card-bg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.light-mode .contact-item {
+  background-color: #f8fafc;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.light-mode .contact-item:hover {
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+}
+
+/* Divider styling */
+.light-mode .divider-line {
+  background-color: rgba(79, 109, 245, 0.3);
+}
+
+.light-mode .divider-icon {
+  color: var(--light-accent-primary);
+}

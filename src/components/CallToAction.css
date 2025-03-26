@@ -1,0 +1,137 @@
+/* src/components/CallToAction.css */
+.call-to-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #6b73ff, #8b5cf6);
+    padding: 40px;
+    border-radius: 10px;
+    color: #ffffff;
+    margin-top: 70px;
+    max-width: 5000px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 50px;
+    transition: all 0.3s ease;
+}
+
+.dark-mode .call-to-action {
+    background-color: var(--dark-bg-secondary);
+    color: var(--dark-text-secondary);
+}
+
+.light-mode .call-to-action {
+    background-color: var(--light-bg-secondary);
+    color: var(--light-text-secondary);
+}
+
+.cta-content {
+    max-width: 100%;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.dark-mode .cta-content h2 {
+    color: var(--dark-text-primary);
+}
+
+.light-mode .cta-content h2 {
+    color: var(--light-text-primary);
+}
+
+.cta-content span {
+    transition: color 0.3s ease;
+}
+
+.dark-mode .cta-content span {
+    color: var(--dark-accent-primary);
+}
+
+.light-mode .cta-content span {
+    color: var(--light-accent-primary);
+}
+
+.cta-content p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #000dff;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    background-color: #000dff;
+    color: #ffffff;
+}
+
+.cta-image img {
+    width: 200px;
+    border-radius: 8px;
+}
+.cta-image {
+    margin-left: 50px; /* Di chuyển ảnh sang phải */
+    margin-top: 50px; /* Di chuyển ảnh xuống dưới */
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.get-in-touch {
+    border: none;
+}
+
+.dark-mode .get-in-touch {
+    background: linear-gradient(45deg, #64B5F6, #7C4DFF);
+    color: white;
+}
+
+.light-mode .get-in-touch {
+    background: linear-gradient(45deg, #3b82f6, #6d28d9);
+    color: white;
+}
+
+.get-in-touch:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}

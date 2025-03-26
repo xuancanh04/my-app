@@ -1,0 +1,1538 @@
+/* Base Styles */
+:root {
+  --primary-color: #6e8aff;
+  --primary-hover: #5a78e6;
+  --background-dark: #131825;
+  --card-bg-dark: #1a1e2e;
+  --card-bg-hover: #232838;
+  --text-light: #ffffff;
+  --text-gray: rgba(255, 255, 255, 0.8);
+  --text-lighter-gray: rgba(255, 255, 255, 0.6);
+  --border-color: rgba(255, 255, 255, 0.1);
+  
+  /* Thêm biến màu cho Light Mode */
+  --light-primary: #4f6df5;
+  --light-secondary: #3b5fe0;
+  --light-text-primary: #2d3748;
+  --light-text-secondary: #4a5568;
+  --light-card-bg: #ffffff;
+  --light-background: #f5f8ff;
+  --light-card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+  --bg-color: var(--background-dark);
+  --text-color: var(--text-light);
+  --card-bg: var(--card-bg-dark);
+}
+
+.light-mode {
+  --bg-color: var(--light-background);
+  --text-color: var(--light-text-primary);
+  --card-bg: var(--light-card-bg);
+}
+
+.portfolio {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Projects Header */
+.projects-content {
+  padding: 60px 0;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-light);
+}
+
+.highlight {
+  color: var(--primary-color);
+}
+
+.projects-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-gray);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Filter Buttons */
+.projects-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 12px;
+}
+
+.filter-btn {
+  background-color: rgba(26, 30, 46, 0.8);
+  border: none;
+  color: var(--text-gray);
+  padding: 10px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.filter-btn:hover {
+  background-color: rgba(110, 138, 255, 0.1);
+  color: var(--text-light);
+  border-color: rgba(110, 138, 255, 0.3);
+}
+
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 4px 12px rgba(110, 138, 255, 0.3);
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 30px;
+}
+
+/* Project Card */
+.project-card {
+  background-color: var(--card-bg-dark);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-category {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: rgba(19, 24, 37, 0.85);
+  color: var(--text-light);
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-info {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-light);
+}
+
+.project-description {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.tech-tag {
+  background-color: rgba(110, 138, 255, 0.15);
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.project-additional {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.additional-feature {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-lighter-gray);
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.view-details-btn {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-color);
+  background-color: rgba(110, 138, 255, 0.1);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.view-details-btn:hover {
+  background-color: var(--primary-color);
+  color: #131825;
+  gap: 12px;
+  box-shadow: 0 5px 15px rgba(110, 138, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+/* Header & Navigation */
+.header {
+  padding: 20px 0;
+  background-color: rgba(19, 24, 37, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  color: var(--text-gray);
+  margin-right: 30px;
+  cursor: pointer;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.portfolio-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: auto;
+  color: #8b5cf6;
+}
+
+.nav-icon {
+  margin-right: 8px;
+}
+
+.nav-item.active {
+  color: var(--primary-color);
+}
+
+.btn-toggle-mode {
+  background: none;
+  border: none;
+  color: var(--text-gray);
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-title {
+    font-size: 2.2rem;
+  }
+  
+  .projects-filter {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects-content {
+    padding: 40px 0;
+  }
+  
+  .nav-item span {
+    display: none;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  .nav-icon {
+    margin-right: 0;
+    font-size: 1.2rem;
+  }
+  
+  .project-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Featured Project Section */
+.featured-project {
+  margin-top: 100px;
+  padding: 60px 0;
+  background-color: rgba(19, 24, 37, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Thêm hiệu ứng nền */
+.featured-project::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(110, 138, 255, 0.05) 0%, transparent 100%);
+  z-index: 0;
+}
+
+.featured-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.featured-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.featured-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-gray);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.featured-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 0 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.featured-image {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  transform: perspective(1000px) rotateY(-2deg);
+  transition: all 0.5s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.featured-image:hover {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.featured-project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.featured-image:hover .featured-project-image {
+  transform: scale(1.03);
+}
+
+/* Thêm một đường viền nhẹ sau khi hover */
+.featured-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.featured-image:hover::after {
+  border-color: rgba(110, 138, 255, 0.3);
+}
+
+.featured-details {
+  padding: 20px 0;
+}
+
+.project-type {
+  display: inline-block;
+  background-color: rgba(110, 138, 255, 0.15);
+  color: var(--primary-color);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(110, 138, 255, 0.1);
+}
+
+.featured-project-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 25px;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+/* Thêm đường gạch chân nhẹ dưới tiêu đề */
+.featured-project-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), transparent);
+  border-radius: 2px;
+}
+
+.featured-description {
+  color: var(--text-gray);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.key-features {
+  margin-bottom: 35px;
+  background-color: rgba(26, 30, 46, 0.6);
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.key-features h4 {
+  color: var(--text-light);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Thêm icon cho Key Features */
+.key-features h4::before {
+  content: "★";
+  color: var(--primary-color);
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.key-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.key-features li {
+  color: var(--text-gray);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.key-features li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.feature-icon {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-top: 4px;
+  background-color: rgba(110, 138, 255, 0.1);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.tech-item {
+  background-color: rgba(110, 138, 255, 0.15);
+  color: var(--primary-color);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(110, 138, 255, 0.1);
+}
+
+.tech-item:hover {
+  background-color: rgba(110, 138, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.architecture-tags {
+  display: flex;
+  gap: 10px;
+}
+
+.arch-tag {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-lighter-gray);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.arch-tag:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive styles for Featured Project */
+@media (max-width: 1024px) {
+  .featured-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 30px;
+  }
+
+  .featured-project-title {
+    font-size: 1.9rem;
+  }
+  
+  .featured-image {
+    transform: perspective(1000px) rotateY(0deg);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-project {
+    margin-top: 70px;
+    padding: 40px 0;
+  }
+
+  .featured-title {
+    font-size: 2.2rem;
+  }
+
+  .featured-content {
+    padding: 0 20px;
+  }
+
+  .featured-description {
+    font-size: 1rem;
+  }
+  
+  .key-features {
+    padding: 20px;
+  }
+  
+  .key-features h4 {
+    font-size: 1.2rem;
+  }
+  
+  .tech-item, .arch-tag {
+    padding: 6px 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .featured-project {
+    margin-top: 50px;
+    padding: 30px 0;
+  }
+
+  .featured-title {
+    font-size: 2rem;
+  }
+
+  .featured-project-title {
+    font-size: 1.6rem;
+    padding-bottom: 12px;
+  }
+  
+  .featured-project-title::after {
+    width: 50px;
+    height: 2px;
+  }
+
+  .tech-stack {
+    gap: 8px;
+  }
+
+  .tech-item, .arch-tag {
+    font-size: 0.8rem;
+    padding: 5px 12px;
+  }
+  
+  .key-features li {
+    font-size: 0.95rem;
+  }
+}
+
+/* Project Process Section - Cải tiến */
+.project-process {
+  margin-top: 100px;
+  padding: 70px 0;
+  background-color: rgba(19, 24, 37, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Thêm hiệu ứng nền gradient đẹp hơn */
+.project-process::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at top left, rgba(110, 138, 255, 0.07), transparent 50%),
+    radial-gradient(circle at bottom right, rgba(110, 138, 255, 0.07), transparent 50%);
+  z-index: 0;
+}
+
+.process-header {
+  text-align: center;
+  margin-bottom: 70px;
+  position: relative;
+  z-index: 1;
+}
+
+.process-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Thêm hiệu ứng gạch chân */
+.process-title::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  border-radius: 2px;
+}
+
+.process-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-gray);
+  max-width: 600px;
+  margin: 25px auto 0;
+}
+
+.process-steps {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 30px 40px;
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Xóa đường kết nối ngang giữa các bước */
+.process-steps::before {
+  display: none; /* Ẩn đường ngang */
+}
+
+.process-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 15px;
+  position: relative;
+  transition: all 0.3s ease;
+  max-width: 200px;
+}
+
+/* Thêm số thứ tự vào mỗi bước */
+.process-step::before {
+  content: attr(data-step);
+  position: absolute;
+  top: -35px;
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgba(110, 138, 255, 0.07);
+  z-index: -1;
+  line-height: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-10px);
+}
+
+.process-step:hover::before {
+  opacity: 1;
+}
+
+/* Thêm hiệu ứng "active" cho step khi hover */
+.process-step::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.process-step:hover::after {
+  transform: translateX(-50%) scale(1);
+}
+
+.step-icon {
+  width: 90px;
+  height: 90px;
+  background-color: rgba(26, 30, 46, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  color: var(--primary-color);
+  font-size: 2.2rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  z-index: 2;
+  border: 2px solid rgba(110, 138, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), 
+              inset 0 0 20px rgba(110, 138, 255, 0.05);
+}
+
+/* Thêm hào quang cho icon */
+.step-icon::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background-color: rgba(110, 138, 255, 0.05);
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.process-step:hover .step-icon {
+  transform: translateY(-5px) scale(1.1);
+  background-color: rgba(26, 30, 46, 0.9);
+  color: var(--primary-color);
+  border-color: rgba(110, 138, 255, 0.4);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 
+              inset 0 0 20px rgba(110, 138, 255, 0.1);
+}
+
+.process-step:hover .step-icon::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.step-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin: 15px 0 10px;
+  transition: color 0.3s ease;
+}
+
+.process-step:hover .step-title {
+  color: var(--primary-color);
+}
+
+.step-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-gray);
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* Responsive styles for Project Process */
+@media (max-width: 1100px) {
+  .process-steps {
+    padding: 30px 20px;
+  }
+  
+  .step-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+  
+  .step-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .process-steps {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 30px;
+    padding-top: 40px;
+    gap: 40px;
+  }
+  
+  .process-step {
+    min-width: 180px;
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-process {
+    margin-top: 70px;
+    padding: 50px 0;
+  }
+
+  .process-title {
+    font-size: 2.2rem;
+  }
+  
+  .process-steps {
+    flex-direction: column;
+    gap: 60px;
+    padding: 40px 20px;
+    max-height: none;
+    overflow-x: visible;
+  }
+  
+  .process-steps::before {
+    display: none;
+  }
+  
+  /* Giữ đường kết nối dọc cho mobile */
+  .process-steps::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 50%;
+    width: 3px;
+    background: linear-gradient(180deg, 
+      rgba(110, 138, 255, 0.2), 
+      rgba(110, 138, 255, 0.6) 15%, 
+      rgba(110, 138, 255, 0.6) 85%, 
+      rgba(110, 138, 255, 0.2)
+    );
+    border-radius: 3px;
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+  
+  .process-step {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    flex-direction: row;
+    text-align: left;
+    padding: 5px 10px;
+  }
+  
+  .process-step:nth-child(odd) {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+  
+  .step-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+  
+  .process-step:nth-child(odd) .step-icon {
+    margin-right: 0;
+    margin-left: 20px;
+  }
+  
+  .step-content {
+    flex: 1;
+  }
+  
+  .step-description {
+    max-width: none;
+    margin: 0;
+  }
+  
+  .process-step:hover {
+    transform: translateX(0);
+  }
+  
+  .process-step::before {
+    display: none;
+  }
+  
+  .process-step::after {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-process {
+    margin-top: 50px;
+    padding: 40px 0;
+  }
+
+  .process-title {
+    font-size: 2rem;
+  }
+  
+  .step-title {
+    font-size: 1.2rem;
+  }
+  
+  .step-description {
+    font-size: 0.9rem;
+  }
+  
+  .step-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .process-step, .process-step:nth-child(odd), .process-step:nth-child(even) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .step-icon {
+    margin: 0 0 15px 0;
+  }
+  
+  /* Bỏ cả đường kết nối dọc trên mobile nhỏ nếu muốn */
+  .process-steps::after {
+    display: none;
+  }
+  
+  /* Điều chỉnh margin để giữ vị trí khi không có đường kết nối dọc */
+  .process-step {
+    align-self: center;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-header {
+    margin-bottom: 50px;
+  }
+  
+  .process-steps {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Project Detail Modal */
+.project-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  overflow-y: auto;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode .project-modal-overlay {
+  background-color: rgba(10, 15, 30, 0.85);
+}
+
+.light-mode .project-modal-overlay {
+  background-color: rgba(10, 15, 30, 0.7);
+}
+
+.project-modal {
+  border-radius: 16px;
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalFadeIn 0.3s ease-out;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-mode .project-modal {
+  background-color: var(--dark-bg-secondary);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.light-mode .project-modal {
+  background-color: var(--light-card-bg);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 10;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.dark-mode .modal-close-btn {
+  background: rgba(19, 24, 37, 0.8);
+  color: white;
+}
+
+.light-mode .modal-close-btn {
+  background: rgba(241, 245, 249, 0.9);
+  color: var(--light-text-primary);
+}
+
+.dark-mode .modal-close-btn:hover {
+  background-color: var(--dark-accent-primary);
+  transform: rotate(90deg);
+}
+
+.light-mode .modal-close-btn:hover {
+  background-color: var(--light-accent-primary);
+  color: white;
+  transform: rotate(90deg);
+}
+
+.modal-header {
+  padding: 30px 40px;
+  border-bottom: 1px solid;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dark-mode .modal-header {
+  background-color: rgba(19, 24, 37, 0.5);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.light-mode .modal-header {
+  background-color: rgba(248, 250, 252, 0.8);
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.modal-category {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .modal-category {
+  background-color: rgba(110, 138, 255, 0.15);
+  color: var(--dark-accent-secondary);
+}
+
+.light-mode .modal-category {
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--light-accent-secondary);
+}
+
+.modal-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .modal-title {
+  color: var(--dark-text-primary);
+}
+
+.light-mode .modal-title {
+  color: var(--light-text-primary);
+}
+
+.modal-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-bottom: 1px solid;
+  transition: border-color 0.3s ease;
+}
+
+.dark-mode .modal-image {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.light-mode .modal-image {
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.modal-info {
+  padding: 40px;
+}
+
+.modal-description h3, .modal-features h3, .modal-gallery h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .modal-description h3, 
+.dark-mode .modal-features h3, 
+.dark-mode .modal-gallery h3 {
+  color: var(--dark-text-primary);
+}
+
+.light-mode .modal-description h3, 
+.light-mode .modal-features h3, 
+.light-mode .modal-gallery h3 {
+  color: var(--light-text-primary);
+}
+
+.modal-description h3::after, 
+.modal-features h3::after, 
+.modal-gallery h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode .modal-description h3::after, 
+.dark-mode .modal-features h3::after, 
+.dark-mode .modal-gallery h3::after {
+  background-color: var(--dark-accent-primary);
+}
+
+.light-mode .modal-description h3::after, 
+.light-mode .modal-features h3::after, 
+.light-mode .modal-gallery h3::after {
+  background-color: var(--light-accent-primary);
+}
+
+.modal-description p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .modal-description p {
+  color: var(--dark-text-secondary);
+}
+
+.light-mode .modal-description p {
+  color: var(--light-text-secondary);
+}
+
+.modal-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+  padding: 25px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode .modal-details {
+  background-color: rgba(19, 24, 37, 0.5);
+}
+
+.light-mode .modal-details {
+  background-color: rgba(248, 250, 252, 0.8);
+}
+
+.modal-detail-item h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .modal-detail-item h4 {
+  color: var(--dark-text-primary);
+}
+
+.light-mode .modal-detail-item h4 {
+  color: var(--light-text-primary);
+}
+
+/* Buttons */
+.modal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  flex: 1;
+}
+
+.primary-btn {
+  border: none;
+}
+
+.dark-mode .primary-btn {
+  background-color: var(--dark-accent-primary);
+  color: white;
+}
+
+.light-mode .primary-btn {
+  background-color: var(--light-accent-primary);
+  color: white;
+}
+
+.dark-mode .primary-btn:hover {
+  background-color: #7c4dff;
+  transform: translateY(-3px);
+}
+
+.light-mode .primary-btn:hover {
+  background-color: #5b21b6;
+  transform: translateY(-3px);
+}
+
+.secondary-btn {
+  background-color: transparent;
+}
+
+.dark-mode .secondary-btn {
+  color: var(--dark-text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.light-mode .secondary-btn {
+  color: var(--light-text-primary);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .secondary-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+}
+
+.light-mode .secondary-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateY(-3px);
+}
+
+/* Responsive styles for modal */
+@media (max-width: 768px) {
+  .project-modal {
+    width: 95%;
+    max-height: 85vh;
+  }
+  
+  .modal-header {
+    padding: 25px 30px;
+  }
+  
+  .modal-title {
+    font-size: 1.8rem;
+  }
+  
+  .modal-image {
+    height: 300px;
+  }
+  
+  .modal-info {
+    padding: 30px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .modal-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-header {
+    padding: 20px 25px;
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+  }
+  
+  .modal-image {
+    height: 200px;
+  }
+  
+  .modal-info {
+    padding: 25px 20px;
+  }
+  
+  .modal-description p {
+    font-size: 1rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-detail-item {
+    padding: 15px;
+  }
+}
+
+.light-mode .projects-title {
+  color: var(--light-text-primary);
+}
+
+.light-mode .highlight {
+  color: var(--light-primary);
+}
+
+.light-mode .projects-subtitle {
+  color: var(--light-text-secondary);
+}
+
+/* Filter Buttons in Light Mode */
+.light-mode .filter-btn {
+  background-color: rgba(240, 242, 255, 0.8);
+  color: var(--light-text-secondary);
+  border: 1px solid rgba(79, 109, 245, 0.1);
+}
+
+.light-mode .filter-btn:hover {
+  background-color: rgba(79, 109, 245, 0.1);
+  color: var(--light-text-primary);
+  border-color: rgba(79, 109, 245, 0.3);
+}
+
+.light-mode .filter-btn.active {
+  background-color: var(--light-primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(79, 109, 245, 0.2);
+}
+
+/* Project Cards in Light Mode */
+.light-mode .project-card {
+  background-color: var(--light-card-bg);
+  box-shadow: 0 8px 20px var(--light-card-shadow);
+}
+
+.light-mode .project-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.light-mode .project-category {
+  background-color: rgba(79, 109, 245, 0.85);
+  color: white;
+}
+
+.light-mode .project-title {
+  color: var(--light-text-primary);
+}
+
+.light-mode .project-description {
+  color: var(--light-text-secondary);
+}
+
+.light-mode .tech-tag {
+  background-color: rgba(79, 109, 245, 0.15);
+  color: var(--light-primary);
+}
+
+.light-mode .additional-feature {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--light-text-secondary);
+}
+
+/* View Details Button in Light Mode */
+.light-mode .view-details-btn {
+  color: var(--light-primary);
+  background-color: rgba(79, 109, 245, 0.1);
+}
+
+.light-mode .view-details-btn:hover {
+  background-color: var(--light-primary);
+  color: white;
+  box-shadow: 0 5px 15px rgba(79, 109, 245, 0.3);
+}
+
+/* Header & Navigation in Light Mode */
+.light-mode .header {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .nav-item {
+  color: var(--light-text-secondary);
+}
+
+.light-mode .portfolio-title {
+  color: var(--light-primary);
+}
+
+.light-mode .nav-item.active {
+  color: var(--light-primary);
+  font-weight: 600;
+}
+
+.light-mode .btn-toggle-mode {
+  color: var(--light-text-secondary);
+}

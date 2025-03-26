@@ -1,0 +1,191 @@
+/* src/components/Skills.css */
+.skills {
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .skills {
+    background-color: var(--dark-bg-primary);
+    color: var(--dark-text-secondary);
+}
+
+.light-mode .skills {
+    background-color: var(--light-bg-primary);
+    color: var(--light-text-secondary);
+}
+
+.skills h2 {
+    font-size: 2em;
+}
+
+.dark-mode .skills h2 {
+    color: var(--dark-text-primary);
+}
+
+.light-mode .skills h2 {
+    color: var(--light-text-primary);
+}
+
+.skills span {
+    color: #8b5cf6;
+}
+
+.dark-mode .skills span {
+    color: var(--dark-accent-primary);
+}
+
+.light-mode .skills span {
+    color: var(--light-accent-primary);
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.skill-category {
+    background-color: #1e293b;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 320px;
+}
+
+.dark-mode .skill-category {
+    background-color: var(--dark-bg-secondary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .skill-category {
+    background-color: var(--light-card-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.skill-category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-category h3 {
+    color: #64B5F6;
+}
+
+.dark-mode .skill-category h3 {
+    color: var(--dark-accent-secondary);
+}
+
+.light-mode .skill-category h3 {
+    color: var(--light-accent-secondary);
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li {
+    margin: 10px 0;
+    color: #e5e7eb;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.dark-mode .skill-category li {
+    color: var(--dark-text-secondary);
+}
+
+.light-mode .skill-category li {
+    color: var(--light-text-secondary);
+}
+
+.skill-category li:hover {
+    color: #8b5cf6;
+}
+
+.dark-mode .skill-category li:hover {
+    color: var(--dark-accent-primary);
+}
+
+.light-mode .skill-category li:hover {
+    color: var(--light-accent-primary);
+}
+
+.view-all-skills-btn {
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #64B5F6;
+    border: 2px solid #64B5F6;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .view-all-skills-btn {
+    color: var(--dark-accent-secondary);
+    border-color: var(--dark-accent-secondary);
+}
+
+.light-mode .view-all-skills-btn {
+    color: var(--light-accent-secondary);
+    border-color: var(--light-accent-secondary);
+}
+
+.view-all-skills-btn:hover {
+    background-color: #64B5F6;
+    color: #ffffff;
+}
+
+.dark-mode .view-all-skills-btn:hover {
+    background-color: var(--dark-accent-secondary);
+    color: white;
+}
+
+.light-mode .view-all-skills-btn:hover {
+    background-color: var(--light-accent-secondary);
+    color: white;
+}
+
+/* Thêm style cho icons */
+.skill-icon {
+    font-size: 1.2em;
+    width: 24px;
+    color: #8b5cf6;
+    margin-right: 8px;
+}
+
+.dark-mode .skill-icon {
+    color: var(--dark-accent-primary);
+}
+
+.light-mode .skill-icon {
+    color: var(--light-accent-primary);
+}
+
+/* Điều chỉnh responsive */
+@media (max-width: 992px) {
+    .skills-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skill-category {
+        margin-bottom: 20px;
+        width: 90%;
+        max-width: 400px;
+        min-height: auto;
+    }
+}
