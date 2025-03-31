@@ -213,3 +213,47 @@
 .nav-button.logout-button:hover {
   background-color: #ff3333;
 }
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .button-container {
+    flex-wrap: wrap;
+  }
+  
+  .button-container button {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .App {
+    overflow-x: hidden;
+  }
+  
+  .button-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .button-container button {
+    flex: 0 0 calc(50% - 10px);
+    margin-bottom: 10px;
+  }
+  
+  .stat-card, .camera-view, .chart-container, 
+  .settings-section, .student-list, .alerts-panel {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-container button {
+    flex: 0 0 100%;
+  }
+  
+  .nav-button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}

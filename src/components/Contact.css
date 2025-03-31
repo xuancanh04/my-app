@@ -563,16 +563,15 @@
   transform: translateY(-3px);
 }
 
-/* Responsive styles */
+/* Enhanced Responsive Styles */
 @media (max-width: 1100px) {
   .contact-wrapper {
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    gap: 20px;
   }
   
   .contact-info,
   .contact-form {
-    padding: 30px;
+    padding: 25px;
   }
 }
 
@@ -582,7 +581,7 @@
   }
   
   .contact-title {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
   
   .contact-info {
@@ -600,31 +599,12 @@
   }
   
   .contact-title {
-    font-size: 2.2rem;
-  }
-  
-  .profile-image {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-@media (max-width: 576px) {
-  .contact-header {
-    margin-bottom: 30px;
-  }
-  
-  .contact-title {
     font-size: 2rem;
   }
   
-  .contact-subtitle {
-    font-size: 1rem;
-  }
-  
-  .contact-info,
-  .contact-form {
-    padding: 25px;
+  .profile-image {
+    width: 60px;
+    height: 60px;
   }
   
   .contact-item {
@@ -637,29 +617,112 @@
     font-size: 1rem;
   }
   
-  .tiktok-card {
+  .contact-detail h3 {
+    font-size: 0.95rem;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+  }
+  
+  .submit-btn {
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-header {
+    margin-bottom: 30px;
+  }
+  
+  .contact-title {
+    font-size: 1.8rem;
+  }
+  
+  .contact-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .contact-info,
+  .contact-form {
     padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .contact-item {
+    padding: 10px;
+  }
+  
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .tiktok-card {
+    padding: 15px;
   }
   
   .tiktok-profile {
     flex-direction: column;
     text-align: center;
+    gap: 15px;
   }
   
   .profile-image {
-    margin-right: 0;
-    margin-bottom: 10px;
+    margin: 0 auto;
   }
   
   .form-group {
-    flex-direction: column;
+    margin-bottom: 15px;
   }
   
   .form-group label {
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .divider {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .contact-title {
+    font-size: 1.6rem;
+  }
+  
+  .contact-info h2, 
+  .contact-form h2 {
+    font-size: 1.3rem;
+  }
+  
+  .contact-links {
+    gap: 12px;
+  }
+  
+  .submit-btn {
     width: 100%;
-    padding-top: 0;
-    margin-bottom: 8px;
-    margin-right: 0;
+    padding: 12px;
+  }
+  
+  .tiktok-stats {
+    gap: 10px;
+  }
+  
+  .tiktok-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
   }
 }
 

@@ -445,3 +445,113 @@ body, html {
 .light-mode .scroll-down {
   color: var(--light-text-secondary);
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .portfolio-title {
+    margin-right: 250px;
+    margin-left: 50px;
+  }
+  
+  .avatar {
+    margin-left: 100px;
+  }
+  
+  .avatar img {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-title {
+    margin-right: 100px;
+    margin-left: 20px;
+  }
+  
+  .nav-list {
+    padding: 0 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav-item {
+    margin: 5px;
+  }
+  
+  .introduction {
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+  
+  .avatar {
+    margin: 0 auto 30px;
+  }
+  
+  .avatar img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .intro-title {
+    margin-top: 20px;
+  }
+  
+  .buttons {
+    justify-content: center;
+  }
+  
+  .statistics {
+    margin-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .scroll-down {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-title {
+    margin-right: 20px;
+    margin-left: 10px;
+    font-size: 1.2em;
+  }
+  
+  .nav-item span {
+    display: none;
+  }
+  
+  .nav-item .nav-icon {
+    font-size: 1.5em;
+  }
+  
+  .avatar img {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .intro-name {
+    font-size: 2.5em;
+  }
+  
+  .intro-role {
+    font-size: 1.5em;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 12px 15px;
+  }
+}
