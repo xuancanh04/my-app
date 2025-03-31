@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon, faHome, faUser, faCode, faLaptopCode, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "./SkillsCopy.css";
+import { useTheme } from "../context/ThemeContext";
 
 const SkillsCopy = ({ setCurrentPage }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode, toggleDarkMode } = useTheme();
 
   const navItems = [
     { name: "Home", icon: faHome },
@@ -13,10 +14,6 @@ const SkillsCopy = ({ setCurrentPage }) => {
     { name: "Projects", icon: faLaptopCode },
     { name: "Contact", icon: faEnvelope }
   ];
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
 
   const handleNavClick = (itemName) => {
     const page = itemName.toLowerCase();

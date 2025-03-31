@@ -9,9 +9,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import "./Contact.css";
 import emailjs from '@emailjs/browser';
+import { useTheme } from "../context/ThemeContext";
 
 const Contact = ({ setCurrentPage }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode, toggleDarkMode } = useTheme();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -82,7 +83,7 @@ const Contact = ({ setCurrentPage }) => {
           <ul className="nav-list">
             <li className="nav-item portfolio-title">Portfolio</li>
             <li className="nav-item">
-              <button className="btn-toggle-mode" onClick={() => setIsDarkMode(!isDarkMode)}>
+              <button className="btn-toggle-mode" onClick={toggleDarkMode}>
                 <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
               </button>
             </li>

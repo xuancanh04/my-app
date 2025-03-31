@@ -18,9 +18,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import "./SkillsCopy.css";
+import { useTheme } from "../context/ThemeContext";
 
 const SkillsCopy = ({ setCurrentPage }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode, toggleDarkMode } = useTheme();
   const [activeTab, setActiveTab] = useState("all");
   const [activeSection, setActiveSection] = useState("skills");
 
@@ -31,10 +32,6 @@ const SkillsCopy = ({ setCurrentPage }) => {
     { name: "Projects", icon: faLaptopCode },
     { name: "Contact", icon: faEnvelope }
   ];
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(prevMode => !prevMode);
-  };
 
   // Animated progress circles
   useEffect(() => {
@@ -348,7 +345,7 @@ const SkillsCopy = ({ setCurrentPage }) => {
                     </div>
                   ))}
               </div>
-              
+               
               {/* Thêm phần Currently Learning ở cuối phần Skills */}
               <div className="learning-section">
                 <div className="learning-header">

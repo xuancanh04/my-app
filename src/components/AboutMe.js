@@ -7,14 +7,11 @@ import Testimonials from './Testimonials';
 import CallToAction from './CallToAction';
 import SkillsCopy from "./SkillsCopy";
 import Skills from "./Skills";
+import { useTheme } from "../context/ThemeContext";
 
 const AboutMe = ({ setCurrentPage }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode, toggleDarkMode } = useTheme();
   const [currentSection, setCurrentSection] = useState("home");
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
 
   const handleNav = (section) => {
     console.log("Navigation clicked:", section);

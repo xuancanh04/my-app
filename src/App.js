@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import SkillsCopy from './components/SkillsCopy';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('aboutme');
@@ -34,10 +35,12 @@ function App() {
   };
 
   return (
-    <div className="App">
-      {renderPage()}
-      <Footer /> {/* Thêm Footer vào cuối trang */}
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        {renderPage()}
+        <Footer /> {/* Thêm Footer vào cuối trang */}
+      </div>
+    </ThemeProvider>
   );
 }
 

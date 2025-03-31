@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faSun, faMoon, faHome, faUser, faCode, faLaptopCode, faEnvelope, 
@@ -6,9 +6,10 @@ import {
   faUsers, faFutbol, faPen, faLandmark
 } from "@fortawesome/free-solid-svg-icons";
 import "./About.css";
+import { useTheme } from "../context/ThemeContext";
 
 const About = ({ setCurrentPage }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode, toggleDarkMode } = useTheme();
 
   const navItems = [
     { name: "Home", icon: faHome },
@@ -17,10 +18,6 @@ const About = ({ setCurrentPage }) => {
     { name: "Projects", icon: faLaptopCode },
     { name: "Contact", icon: faEnvelope }
   ];
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(prevMode => !prevMode);
-  };
 
   return (
     <div className={`portfolio ${isDarkMode ? "dark-mode" : "light-mode"}`}>

@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./Projects.css";
+import { useTheme } from "../context/ThemeContext";
 
 // Import các hình ảnh dự án (bạn sẽ cần tạo thư mục images và thêm các hình ảnh dự án)
 // import vmsImage from "../images/vms-project.jpg";
@@ -17,7 +18,7 @@ import "./Projects.css";
 // import vbraceImage from "../images/vbrace.jpg";
 
 const Projects = ({ setCurrentPage }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode, toggleDarkMode } = useTheme();
   const [activeFilter, setActiveFilter] = useState("all");
   const [selectedProject, setSelectedProject] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -131,7 +132,7 @@ const Projects = ({ setCurrentPage }) => {
           <ul className="nav-list">
             <li className="nav-item portfolio-title">Portfolio</li>
             <li className="nav-item">
-              <button className="btn-toggle-mode" onClick={() => setIsDarkMode(!isDarkMode)}>
+              <button className="btn-toggle-mode" onClick={toggleDarkMode}>
                 <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
               </button>
             </li>
