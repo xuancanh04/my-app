@@ -4,6 +4,8 @@
     color: #94a3b8;
     padding: 60px 80px;
     font-family: Arial, sans-serif;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .footer-content {
@@ -119,14 +121,24 @@
 @media (max-width: 768px) {
     .footer {
         padding: 40px 20px;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .footer-content {
+        flex-direction: column;
         gap: 30px;
+        width: 100%;
     }
     
     .footer-section {
-        min-width: 100%;
+        min-width: auto;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .footer-section:first-child {
+        margin-right: 0;
     }
     
     .footer-bottom {
@@ -134,8 +146,98 @@
         align-items: center;
         text-align: center;
         gap: 20px;
+        width: 100%;
+    }
+    
+    .footer-bottom ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        width: 100%;
     }
 }
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 15px;
+    }
+    
+    .footer-section h4 {
+        margin-bottom: 12px;
+        font-size: 1.2em;
+    }
+    
+    .footer-section p {
+        font-size: 0.9em;
+    }
+    
+    .footer-section ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        width: 100%;
+    }
+    
+    .footer-section:nth-child(2) ul,
+    .footer-section:nth-child(3) ul {
+        justify-content: flex-start;
+    }
+    
+    .footer-section li {
+        margin-bottom: 0;
+        font-size: 0.9em;
+    }
+    
+    .footer-section form {
+        flex-direction: row;
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .footer-section input[type="email"] {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+    
+    .footer-section button[type="submit"] {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .social-icons {
+        justify-content: flex-start;
+    }
+    
+    .footer-bottom p,
+    .footer-bottom li {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 360px) {
+    .footer {
+        padding: 20px 10px;
+    }
+    
+    .footer-section h4 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+    
+    .footer-section p {
+        font-size: 0.85em;
+    }
+    
+    .footer-section li {
+        font-size: 0.85em;
+    }
+    
+    .footer-bottom p,
+    .footer-bottom li {
+        font-size: 0.75em;
+    }
+}
+
 .footer-section form {
     display: flex;
     align-items: center;
